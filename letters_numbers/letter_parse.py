@@ -39,7 +39,7 @@ def get_verification():
     return text
 
 
-def do_login():
+def login():
     i = 0  # 识别错误次数
     # 获取验证码
     captcha = get_verification()
@@ -71,4 +71,4 @@ def do_login():
 
 # 开始程序
 if __name__ == "__main__":
-    do_login()
+    login()
