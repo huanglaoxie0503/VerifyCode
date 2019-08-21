@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-
-# 从 Pillow 中导入图片处理模块 Image
 from PIL import Image
-# 导入基于 Tesseract 的文字识别模块 pytesseract
 import pytesseract
-# 导入发送网络请求的库 requests
 import requests
-# 导入正则库 re
 import re
 
 """
@@ -39,7 +34,7 @@ def get_verification():
     # 利用pytesseract进行图片内容识别
     text = pytesseract.image_to_string(im)
     # 去除识别结果中的非数字/字母内容
-    text = re.sub("\W", "", text)
+    text = re.sub(r"\W", "", text)
     # 返回验证码内容
     return text
 
